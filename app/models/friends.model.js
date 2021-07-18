@@ -4,7 +4,7 @@ module.exports = mongoose => {
             name: String,
             bio: String,
             date_of_birth: String,
-            user_id: String,
+            connected: Boolean,
         }, { timestamps: true });
     schema.method("toJSON", function() {
         const { __v, _id, ...object } = this.toObject();
